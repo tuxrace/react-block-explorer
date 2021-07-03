@@ -56,7 +56,7 @@ const Main = () => {
                     <Grid item>
                         <Typography variant="h6">{contract?.symbol?.value}</Typography> 
                         <Typography variant="body1">Name: {contract?.name?.value}</Typography> 
-                        <Typography variant="body2">Owner: {contract?.owner?.value}</Typography> 
+                        <Typography variant="caption">{contract?.owner?.value}</Typography>
                         <Typography variant="body1">Total Tokens: {contract?.total_tokens?.value}</Typography> 
                         <Typography variant="body1">Decimals: {contract?.decimals?.value}</Typography> 
                     </Grid>}
