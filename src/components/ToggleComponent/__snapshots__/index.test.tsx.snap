@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Searchbar component renders Searchbar component 1`] = `
+<body>
+  <div>
+    <div
+      class="MuiToggleButtonGroup-root makeStyles-toggleStyle-1"
+      role="group"
+    >
+      <button
+        aria-pressed="false"
+        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal"
+        tabindex="0"
+        type="button"
+        value="5938fc8af82250ad6cf1da3bb92f4aa005cb2717"
+      >
+        <span
+          class="MuiToggleButton-label"
+        >
+           
+          AliceCoin
+           
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+      <button
+        aria-pressed="false"
+        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal"
+        tabindex="0"
+        type="button"
+        value="acfbdcf4693b1780e474116211f7f4795f24e06a"
+      >
+        <span
+          class="MuiToggleButton-label"
+        >
+           
+          BobCoin
+           
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`ToggleComponent component renders ToggleComponent component 1`] = `
+<body>
+  <div>
+    <div
+      class="MuiToggleButtonGroup-root makeStyles-toggleStyle-1"
+      role="group"
+    >
+      <button
+        aria-pressed="false"
+        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal"
+        tabindex="0"
+        type="button"
+        value="5938fc8af82250ad6cf1da3bb92f4aa005cb2717"
+      >
+        <span
+          class="MuiToggleButton-label"
+        >
+           
+          AliceCoin
+           
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+      <button
+        aria-pressed="false"
+        class="MuiButtonBase-root MuiToggleButton-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal"
+        tabindex="0"
+        type="button"
+        value="acfbdcf4693b1780e474116211f7f4795f24e06a"
+      >
+        <span
+          class="MuiToggleButton-label"
+        >
+           
+          BobCoin
+           
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+  </div>
+</body>
+`;

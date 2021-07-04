@@ -3,6 +3,8 @@
 This project was created using react, typescript, and zilliqa dev api
 
 ![](screen.png)
+
+### Mobile
 ![](mobile.jpeg)
 
 ## Features
