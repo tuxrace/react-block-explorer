@@ -2,14 +2,15 @@
 import React, { useEffect, useState, useCallback } from 'react'
 import Header from '../../components/Header'
 import SearchBar from '../../components/SearchBar'
+import DetailsCard from '../../components/DetailsCard'
 import ToggleComponent from '../../components/ToggleComponent'
+import BarChartComponent from '../../components/BarChartComponent'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import styles from './styles'
 import { makeStyles, Typography } from '@material-ui/core'
-import CircularProgress from '@material-ui/core/CircularProgress';
 import { getContracts } from '../../contractsService'
-import { convertResults } from '../../helpers'
+import { convertResults, convertStr } from '../../helpers'
 import { tokenMap } from '../../config'
 import { CoinTypes } from '../../types'
 
@@ -41,25 +42,25 @@ const Main = () => {
         setToken(value)
     }
 
+    const handleSearch = (value: string) => {
+        setToken(convertStr(value))
+    }
+
     return (
         <>
             <Header />
             <Container className={classes.container}>
                 <Grid md={10} xs={12}>
-                    <SearchBar />
+                    <SearchBar handleSearch={handleSearch} />
                 </Grid>
                 <Grid md={12}>
                     <ToggleComponent selected={token} handleChange={handleChange}/>
                 </Grid>
                 <Grid container md={10} xs={12} style={{border: '1px solid lightgrey', borderRadius: 6, padding: 16}}>
-                    {loading ? <Grid item><CircularProgress size={24} /></Grid>: 
-                    <Grid item>
-                        <Typography variant="h6">{contract?.symbol?.value}</Typography> 
-                        <Typography variant="body1">Name: {contract?.name?.value}</Typography> 
-                        <Typography variant="caption">{contract?.owner?.value}</Typography>
-                        <Typography variant="body1">Total Tokens: {contract?.total_tokens?.value}</Typography> 
-                        <Typography variant="body1">Decimals: {contract?.decimals?.value}</Typography> 
-                    </Grid>}
+                    <DetailsCard loading={loading} contract={contract} />
+                </Grid>
+                <Grid container md={10} xs={12} style={{border: '1px solid lightgrey', borderRadius: 6, padding: 16}}>
+                    <BarChartComponent />
                 </Grid>
             </Container>
         </>

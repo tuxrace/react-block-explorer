@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component renders header component 1`] = `
+<body>
+  <div>
+    <header
+      class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary makeStyles-header-2 MuiPaper-elevation4"
+    >
+      <h6
+        class="MuiTypography-root MuiTypography-h6"
+      >
+        🛡️
+         Clever Block Explorer
+      </h6>
+    </header>
+  </div>
+</body>
+`;

@@ -8,3 +8,7 @@ export const convertResults = (arr: ResultsParams[]) => {
         return acc
     }, {})
 }
+
+export const convertStr = (value: string) => {
+    return value.substring(2)
+}

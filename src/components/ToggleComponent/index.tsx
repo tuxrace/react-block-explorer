@@ -10,6 +10,7 @@ const ToggleComponent = (props: any) => {
     const {handleChange, selected} = props
     const useStyles = makeStyles(styles)
     const classes = useStyles()
+    
     return <ToggleButtonGroup exclusive value={selected} onChange={handleChange} className={classes.toggleStyle}>
         <ToggleButton value={tokenMap[CoinTypes.Alice]}> {CoinTypes.Alice} </ToggleButton>
         <ToggleButton value={tokenMap[CoinTypes.Bob]}> {CoinTypes.Bob} </ToggleButton>
