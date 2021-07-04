@@ -59,7 +59,7 @@ const Main = () => {
                 <Grid container md={10} xs={12} style={{border: '1px solid lightgrey', borderRadius: 6, padding: 16}}>
                     <DetailsCard loading={loading} contract={contract} />
                 </Grid>
-                <Grid container md={10} xs={12} style={{border: '1px solid lightgrey', borderRadius: 6, padding: 16}}>
+                <Grid container md={10} xs={12} style={{border: '1px solid lightgrey', borderRadius: 6, padding: 16, marginTop: 16}}>
                     <BarChartComponent selected={token}/>
                 </Grid>
             </Container>
