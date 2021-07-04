@@ -1,5 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`DetailsCard component renders DetailsCard component 1`] = `
+<body>
+  <div>
+    <div
+      class="MuiGrid-root MuiGrid-item"
+    >
+      <h6
+        class="MuiTypography-root MuiTypography-h6"
+      />
+      <p
+        class="MuiTypography-root MuiTypography-body1"
+      >
+        Name: 
+      </p>
+      <span
+        class="MuiTypography-root MuiTypography-caption"
+      />
+      <p
+        class="MuiTypography-root MuiTypography-body1"
+      >
+        Total Tokens: 
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body1"
+      >
+        Decimals: 
+      </p>
+    </div>
+  </div>
+</body>
+`;
+
 exports[`Header component renders header component 1`] = `
 <body>
   <div>
