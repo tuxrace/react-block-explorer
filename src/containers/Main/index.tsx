@@ -13,13 +13,15 @@ import { getContracts } from '../../contractsService'
 import { convertResults, convertStr } from '../../helpers'
 import { tokenMap } from '../../config'
 import { CoinTypes } from '../../types'
+import DialogComponent from '../../components/DialogComponent'
 
 const useStyle = makeStyles(styles)
 
 const Main = () => {
     const [contract, setContract] = useState({} as any)
     const [loading, setLoading] = useState({} as any)
-    const [token, setToken] = useState(tokenMap[CoinTypes.Alice])
+    const [open, setOpen] = useState(false)
+    const [token, setToken] = useState<string>(tokenMap[CoinTypes.Alice])
     const classes = useStyle()
     
     const getData = useCallback(async () => {
@@ -28,9 +30,15 @@ const Main = () => {
             method: 'GetSmartContractInit',
             params: [token]
         })
-        if (res) {
+
+        if (res?.error){
+            setOpen(true)
             setLoading(false)
-            setContract(convertResults(res))
+        }
+
+        if (res?.result) {
+            setLoading(false)
+            setContract(convertResults(res?.result))
         }
     }, [token])
 
@@ -46,6 +54,10 @@ const Main = () => {
         setToken(convertStr(value))
     }
 
+    const onModalClose = () => {
+        setOpen(false)
+    }
+
     return (
         <>
             <Header />
@@ -56,12 +68,18 @@ const Main = () => {
                 <Grid md={12}>
                     <ToggleComponent selected={token} handleChange={handleChange}/>
                 </Grid>
-                <Grid container md={10} xs={12} style={{border: '1px solid lightgrey', borderRadius: 6, padding: 16}}>
+                <Grid container md={10} xs={12} className={classes.detailsCardStyle}>
                     <DetailsCard loading={loading} contract={contract} />
                 </Grid>
-                <Grid container md={10} xs={12} style={{border: '1px solid lightgrey', borderRadius: 6, padding: 16, marginTop: 16}}>
+                <Grid container md={10} xs={12} className={classes.barChartStyle}>
                     <BarChartComponent selected={token}/>
                 </Grid>
+                <DialogComponent 
+                    open={open}
+                    onClose={onModalClose}
+                    title="Invalid Address"
+                    content="The transaction address that you have entered on the address bar is somehow invalid. Please try again."
+                />
             </Container>
         </>
     )

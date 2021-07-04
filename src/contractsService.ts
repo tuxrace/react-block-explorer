@@ -8,6 +8,6 @@ export const getContracts = async (params: RpcParams) => {
         jsonrpc: '2.0',
         ...params
     })
-
-    return res?.data?.result
+    
+    return res?.data
 }

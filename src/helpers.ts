@@ -10,5 +10,8 @@ export const convertResults = (arr: ResultsParams[]) => {
 }
 
 export const convertStr = (value: string) => {
-    return value.substring(2)
+    if (value.substring(0, 2) === '0x'){
+        return value.substring(2)
+    }
+    return value
 }

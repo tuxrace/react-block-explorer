@@ -14,8 +14,8 @@ const BarChartComponent = (props: Props) => {
   
   const getData = useCallback(async () => {
     const res = await getContracts({method: 'GetSmartContractState', params:[selected]})
-    if (res) {
-      const balances = res?.balances
+    if (res?.result) {
+      const balances = res?.result?.balances
       const convertedData = Object.keys(balances).map(key => {
         return {
           hash: key,
@@ -30,9 +30,9 @@ const BarChartComponent = (props: Props) => {
       getData()
     }, [selected])
     
-    return <div style={{marginTop: 16}}>
+    return <>
       <VictoryBar data={data} x="hash" y="balance" />
-    </div>
+    </>
 }
 
 export default BarChartComponent
