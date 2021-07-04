@@ -60,7 +60,7 @@ const Main = () => {
                     <DetailsCard loading={loading} contract={contract} />
                 </Grid>
                 <Grid container md={10} xs={12} style={{border: '1px solid lightgrey', borderRadius: 6, padding: 16}}>
-                    <BarChartComponent />
+                    <BarChartComponent selected={token}/>
                 </Grid>
             </Container>
         </>
