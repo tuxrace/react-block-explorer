@@ -2,6 +2,8 @@
 
 This project was created using react, typescript, and zilliqa dev api
 
+working link: https://tuxrace.github.io/react-block-explorer/
+
 ![](screen.png)
 
 ### Mobile
