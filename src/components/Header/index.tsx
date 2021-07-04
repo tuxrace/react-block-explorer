@@ -1,7 +1,7 @@
 import React from 'react'
 import AppBar from '@material-ui/core/AppBar';
 import Typography from '@material-ui/core/Typography';
-import { colors, makeStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import styles from './styles';
 
 

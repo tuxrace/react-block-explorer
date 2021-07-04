@@ -1,6 +1,6 @@
 {
   "name": "block-explorer",
-  "homepage": "http://tuxrace.github.io/block-explorer",
+  "homepage": "http://tuxrace.github.io/react-block-explorer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
